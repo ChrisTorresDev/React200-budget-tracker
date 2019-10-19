@@ -1,7 +1,7 @@
 const defaultState = {
   description: '',
   amount: '',
-  linItems: []
+  lineItems: []
 };
 
 export default function IncomeReducer (state = defaultState, action) {
@@ -28,7 +28,7 @@ export default function IncomeReducer (state = defaultState, action) {
         description: '',
         action: '',
         lineItems: [
-          ...state.linItems,
+          ...state.lineItems,
           { description, amount }
         ]
       };

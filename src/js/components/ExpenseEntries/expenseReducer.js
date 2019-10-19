@@ -1,10 +1,10 @@
 const defaultState = {
   description: '',
   amount: '',
-  linItems: []
+  lineItems: []
 };
 
-export default function ExpenseReducer (state = defaultState, action) {
+export default function ExpenseReducer(state = defaultState, action) {
   const { type, payload } = action;
 
   switch (type) {
@@ -28,7 +28,7 @@ export default function ExpenseReducer (state = defaultState, action) {
         description: '',
         action: '',
         lineItems: [
-          ...state.linItems,
+          ...state.lineItems,
           { description, amount }
         ]
       };
